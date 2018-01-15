@@ -27,7 +27,7 @@ function viewCart() {
       var price = keyValuePair[item];
       contents += `${item} at ${price}, `;
     }
-    if (cart.length > 1) {
+    if (cart.length === 2) {
       contents = contents.substring(0, contents.length - 1);
       var finalPair = cart[cart.length - 1];
       var lastItem = Object.keys(finalPair);
