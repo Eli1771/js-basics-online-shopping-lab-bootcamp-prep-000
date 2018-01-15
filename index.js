@@ -42,9 +42,11 @@ function total() {
 }
 
 function removeFromCart(item) {
+  var itemInCart = false;
   for (var i = 0; i < cart.length; i++) {
     if (cart[i].hasOwnProperty(item)) {
      cart = cart.slice(0, i).concat(cart.slice(i + 1));
+     itemInCart = true;
      return cart;
    } else {
       console.log("That item is not in your cart.");
