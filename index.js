@@ -22,7 +22,8 @@ function viewCart() {
   } else {
     var contents = "In your cart, you have ";
     for (var i = 0; i < cart.length - 1; i++) {
-      var item = Object.getOwnPropertyNames(cart[i]);
+      var keyValuePair = cart[i];
+      var 
       contents += `${item} at ${cart[item]}, `;
     }
     var last = Object.getOwnPropertyNames(cart[cart.length]);
