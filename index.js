@@ -48,10 +48,11 @@ function removeFromCart(item) {
      cart = cart.slice(0, i).concat(cart.slice(i + 1));
      itemInCart = true;
      return cart;
-   } else {
-      console.log("That item is not in your cart.");
-      return cart;
-    }
+   } 
+  }
+  if (itemInCart === false) {
+    console.log("That item is not in your cart");
+    return cart;
   }
 }
 
