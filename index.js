@@ -25,10 +25,12 @@ function viewCart() {
       var keyValuePair = cart[i];
       var item = Object.keys(keyValuePair);
       var price = keyValuePair[item];
-      contents += `${item} at ${cart[item]}, `;
+      contents += `${item} at ${price}, `;
     }
-    var last = Object.getOwnPropertyNames(cart[cart.length]);
-    contents += `and ${last} at ${cart[last]}.`;
+    var finalPair = cart[cart.length - 1];
+    var lastItem = Object.keys(finalPair);
+    var lastPrice = finalPair[lastItem];
+    contents += `and ${lastItem} at ${lastPrice}.`;
     console.log(contents);
   }
 }
