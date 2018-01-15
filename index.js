@@ -35,9 +35,9 @@ function viewCart() {
       contents += `and ${lastItem} at ${lastPrice}.`;
       console.log(contents);
     } else if (cart.length < 2) {
-      var finalPair = cart[cart.length - 1];
-      var lastItem = Object.keys(finalPair);
-      var lastPrice = finalPair[lastItem];
+      let finalPair = cart[cart.length - 1];
+      let lastItem = Object.keys(finalPair);
+      let lastPrice = finalPair[lastItem];
       contents += `and ${lastItem} at ${lastPrice}.`;
       console.log(contents);
     }
