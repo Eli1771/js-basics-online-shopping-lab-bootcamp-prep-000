@@ -23,7 +23,8 @@ function viewCart() {
     var contents = "In your cart, you have ";
     for (var i = 0; i < cart.length - 1; i++) {
       var keyValuePair = cart[i];
-      var 
+      var item = Object.keys(keyValuePair);
+      var price = keyValuePair[item];
       contents += `${item} at ${cart[item]}, `;
     }
     var last = Object.getOwnPropertyNames(cart[cart.length]);
