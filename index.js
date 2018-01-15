@@ -27,11 +27,13 @@ function viewCart() {
       var price = keyValuePair[item];
       contents += `${item} at ${price}, `;
     }
-    var finalPair = cart[cart.length - 1];
-    var lastItem = Object.keys(finalPair);
-    var lastPrice = finalPair[lastItem];
-    contents += `and ${lastItem} at ${lastPrice}.`;
-    console.log(contents);
+    if (cart.length > 1) {
+      var finalPair = cart[cart.length - 1];
+      var lastItem = Object.keys(finalPair);
+      var lastPrice = finalPair[lastItem];
+      contents += `and ${lastItem} at ${lastPrice}.`;
+      console.log(contents);
+    }
   }
 }
 
